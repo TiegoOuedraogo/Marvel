@@ -1,25 +1,22 @@
-import React from "react";
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './Header.module.css'; 
 
 const Header = () => {
-
-    return (
-        <header>
-            <vav>
-                <ul>
-                    <li><a href="/news">NEWS</a></li>
-                    <li><a href="/comics">COMICS</a></li>
-                    <li><a href="/characters">CHARACTERS</a></li>
-                    <li><a href="/movies">MOVIES</a></li>
-                    <li><a href="/tv-shows">TV SHOWS</a></li>
-                    <li><a href="/games">GAMES</a></li>
-                    <li><a href="/videos">VIDEOS</a></li>
-                    <li><a href="/more">MORE</a></li>
-                </ul>
-            </vav>
-        </header>
-    )
-
-}
+  return (
+    <header className={styles.header}>
+      <ul className={styles.navBar}>
+        <li className={styles.navItem}><Link to="/news" className={styles.navLink}>NEWS</Link></li>
+        <li className={styles.navItem}><Link to="/comics" className={styles.navLink}>COMICS</Link></li>
+        <li className={styles.navItem}><Link to="/characters" className={styles.navLink}>CHARACTERS</Link></li>
+        <li className={styles.navItem}><Link to="/movies" className={styles.navLink}>MOVIES</Link></li>
+        <li className={styles.navItem}><Link to="/tv-shows" className={styles.navLink}>TV SHOWS</Link></li>
+        <li className={styles.navItem}><Link to="/games" className={styles.navLink}>GAMES</Link></li>
+        <li className={styles.navItem}><Link to="/videos" className={styles.navLink}>VIDEOS</Link></li>
+        <li className={styles.navItem}><Link to="/more" className={styles.navLink}>MORE</Link></li>
+      </ul>
+    </header>
+  );
+};
 
 export default Header;
